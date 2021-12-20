@@ -14,7 +14,7 @@ if (!$_POST['password']) {
 if ($flag != 1) {
     $email = email_format($_POST['email']);
     $password = password_format($_POST['password']);
-    $sql = mysqli_query(db_conn(), "SELECT * FROM admin_user WHERE email='$email' AND password='$password'");
+    $sql = mysqli_query(db_connect(), "SELECT * FROM admin_user WHERE email='$email' AND password='$password'");
     $row = mysqli_num_rows($sql);
     if ($row == 1) {
         $login_info = mysqli_fetch_assoc($sql);

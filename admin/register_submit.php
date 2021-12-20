@@ -1,5 +1,4 @@
 <?php
-require_once("inc/connection.inc.php");
 require_once("inc/functions.inc.php");
 if (isset($_POST['submit'])) {
     $name = name_format($_POST['name']);
